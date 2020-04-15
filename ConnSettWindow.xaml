@@ -1,0 +1,18 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BaseUpdate"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="BaseUpdate.ConnSettWindow"
+        mc:Ignorable="d"
+        Title="Настройки подключения" Height="242" Width="323" ResizeMode="NoResize">
+    <Grid Margin="0,0,2,-3">
+        <Label x:Name="serverNameLabe" Content="Имя сервера:" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" Height="27" Width="166"/>
+        <TextBox x:Name="serverNameTextBox" HorizontalAlignment="Left" Height="24" Margin="10,43,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="284" TextChanged="ServerNameTextBox_TextChanged"/>
+        <Label x:Name="DbLbel" Content="Имя базы данных:" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Height="27" Width="166"/>
+        <TextBox x:Name="DbTextBox" HorizontalAlignment="Left" Height="23" Margin="10,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="284" TextChanged="TextBox_Copy_TextChanged"/>
+        <Button x:Name="SaveButton" Content="Сохранить" IsEnabled="False" HorizontalAlignment="Left" Margin="115,175,0,0" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.76,0.545" Click="SaveButton_Click"/>
+
+    </Grid>
+</Window>

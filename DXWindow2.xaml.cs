@@ -16,11 +16,11 @@ using DevExpress.Xpf.Core;
 namespace BaseUpdate
 {
     /// <summary>
-    /// Interaction logic for DXWindow1.xaml
+    /// Interaction logic for DXWindow2.xaml
     /// </summary>
-    public partial class DXWindow1 : DXWindow
+    public partial class DXWindow2 : DXWindow
     {
-        public DXWindow1()
+        public DXWindow2()
         {
             InitializeComponent();
         }

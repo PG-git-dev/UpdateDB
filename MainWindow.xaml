@@ -4,9 +4,67 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BaseUpdate"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Обновление базы данных" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+
+            </ColumnDefinition>
+            <ColumnDefinition>
+
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18*">
+
+            </RowDefinition>
+            <RowDefinition Height="51*">
+
+            </RowDefinition>
+            <RowDefinition Height="296*">
+
+            </RowDefinition>
+            <RowDefinition Height="54*">
+
+            </RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Menu Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="1">
+            <MenuItem Header="Настройки подключения" Click="MenuItem_Click"></MenuItem>
+<!--            <MenuItem Header="File">
+                <MenuItem Header="New Project" ></MenuItem>
+                <MenuItem Header="Open Project" >
+                    <MenuItem Header="WinForms"></MenuItem>
+                    <MenuItem Header="WPF" ></MenuItem>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="Exit" ></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Edit" ></MenuItem>
+            <MenuItem Header="View" ></MenuItem>
+-->
+        </Menu>
+ <!--       <Viewbox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"> -->
+
+            <dxg:GridControl  x:Name="grid" AutoPopulateColumns="True" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"
+                     Visibility="Visible" >
+                <dxg:GridControl.View>
+                    <dxg:TableView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" 
+                                   UseLegacyColumnVisibleIndexes="False" 
+                                   AllowEditing="False"
+                                   AlternateRowBackground="Azure" 
+                                   ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                                   ScrollViewer.HorizontalScrollBarVisibility="Auto" 
+                                   ShowGroupPanel="False" FontFamily="Times New Roman" ScrollingMode="Normal"
+                                   />
+                </dxg:GridControl.View>
+            </dxg:GridControl>
+
+<!--        </Viewbox> -->
+        <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" x:Name="medStuffUpdateButton" Content="Оборудование" Click="MedStuffUpdateButton_Click"/>
+        <Button Grid.Column="0" Grid.Row="3" x:Name="OkButton" Content="OK" IsEnabled="False" Click="OkButton_Click" />
+        <Button Grid.Column="1" Grid.Row="3" x:Name="CancelButton" Content="Cancel" IsEnabled="False" Click="CancelButton_Click"/>
     </Grid>
 </Window>
